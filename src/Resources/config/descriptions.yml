@@ -1,0 +1,38 @@
+descriptions:
+  "キーワードごとのCTを求める":
+    result1_type: sum
+    result2_type: gap
+    use_result2_multiplier: false
+    script: "キーワードAのクリック単価は{{n1}}円、キーワードBのクリック単価は{{m1}}円である。ある1ヶ月の運用結果はAのクリック数がBのクリック数より{{result2}}多く、広告費用は{{result1}}円かかった。キーワードA,Bのクリック数はそれぞれいくらか。"
+    x_restrictions:
+      - "plus"
+    y_restrictions:
+      - "plus"
+  "食塩水混合（基本）":
+    result1_type: sum
+    result2_type: sum
+    use_result2_multiplier: false
+    script: "{{n1}}パーセントの食塩水Aと{{m1}}パーセントの食塩水Bを混ぜて{{result1}}パーセントの食塩水{{result2}}グラムを作りたい。A,Bをそれぞれ何グラムずつ使えば良いか。"
+    x_restrictions:
+      - "plus"
+    y_restrictions:
+      - "plus"
+  "食塩水混合（比率）":
+    result1_type: sum
+    result2_type: sum
+    script: "濃度の違う食塩水A,Bがある。AとBを{{n1}}:{{m1}}の割合で混ぜると{{result1}}パーセントの食塩水ができ、{{n2}}:{{m2}}の割合で混ぜると{{result2}}パーセントの食塩水ができる。A,Bの濃度はそれぞれ何パーセントか。"
+    x_restrictions:
+      - "lessthan100"
+      - "plus"
+    y_restrictions:
+      - "lessthan100"
+      - "plus"
+  "仕事量":
+    result1_type: sum1
+    result2_type: sum
+    use_result2_multiplier: false
+    script: "A君が1人ですると{{1/n1}}日かかり、B君が1人ですると{{1/m1}}日かかる仕事がある。前半はA君とB君が2人で仕事をし、後半はA君が1人で仕事をした結果、全部で{{result2}}日かかった。2人で仕事をした日数と、A君が1人で仕事をした日数はそれぞれ何日か。"
+    x_restrictions:
+      - "plus"
+    y_restrictions:
+      - "plus"
